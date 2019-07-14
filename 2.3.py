@@ -3,6 +3,6 @@ import  re
 url=r"http://www.baidu.com"
 res = request.Request(url)
 response= request.urlopen(res).read().decode()
-pat = r"<title>(.*?)</title>"
+pat = "<title>(.*?)</title>"
 data = re.findall(pat,response)
-print(data)...
+print(data)
