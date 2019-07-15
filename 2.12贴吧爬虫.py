@@ -1,5 +1,6 @@
 import urllib
 from urllib import request
+import  re
 import  time
 header =  {"User-Agent":
 "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"
@@ -15,7 +16,7 @@ for i in range (1,4):
 def loadpage(fullurl, filename):
     print("正在下载:",filename)
     req=request.Request(fullurl,headers=header)
-    resp=request.urlopen(req).read()
+    resp=request.urlopen(req).read() #这里要写入文件 所以直接二进制写入文件，而不是解码 <.decode()> 为utf-8
     return  resp
 
 
