@@ -66,6 +66,7 @@ def main():
     dataQueue = queue.Queue()
 
     filename = open(r"C://Users//mi/Desktop/糗事百科1-10页段子标题.txt","w")#写text不能用二进制，写不进的 直接a或w
+                                                                            #写text用字节码，写文件或图片用二进制 所以urllib.request.urlopen(url).read()也不用解析decode()函数 默认读read()就是二进制
 
     t1 = Thread1("采集线程",pageQueue,dataQueue)
     t1.start()
