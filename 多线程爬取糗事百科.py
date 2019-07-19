@@ -65,7 +65,7 @@ def main():
     #解析页面的队列,存放采集好的数据队列
     dataQueue = queue.Queue()
 
-    filename = open(r"C://Users//mi/Desktop/糗事百科1-10页段子标题.txt","a")#必须追加模式
+    filename = open(r"C://Users//mi/Desktop/糗事百科1-10页段子标题.txt","w")#写text不能用二进制，写不进的 直接a或w
 
     t1 = Thread1("采集线程",pageQueue,dataQueue)
     t1.start()
